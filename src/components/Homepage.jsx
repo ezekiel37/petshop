@@ -12,8 +12,10 @@ import gpay from '../assets/images/gpay.png';
 import master from '../assets/images/master.png';
 import paypal from '../assets/images/paypal.png';
 import visa from '../assets/images/visa.png';
+import FeatureCard from './FeatureCard';
+import Button from './Button';
 
-// Reusable Badge Component
+
 const Badge = ({ icon: Icon, text, color = "green" }) => {
   const colorClasses = {
     green: "bg-green-50 text-green-700 border-green-200",
@@ -30,34 +32,6 @@ const Badge = ({ icon: Icon, text, color = "green" }) => {
   );
 };
 
-// Reusable Feature Card Component
-const FeatureCard = ({ icon, title, description, bgColor }) => {
-  return (
-  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-[24px]">
-  <div className={`flex items-center justify-center rounded-full flex-shrink-0 w-12 h-12 sm:w-[60px] sm:h-[60px]`} style={{ background: bgColor }}>
-        <img src={icon} alt="feature icon" className="w-9 h-9 object-contain" />
-      </div>
-  <div className="text-left flex flex-col gap-2 sm:gap-[8px]">
-  <h4 className="font-semibold text-gray-900 leading-tight text-base sm:text-lg">{title}</h4>
-  <p className="text-base text-gray-600 leading-tight">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-// Reusable Button Component
-const Button = ({ children, variant = "primary", className = "" }) => {
-  const variants = {
-    primary: "bg-[#EE6F4B] text-white",
-    secondary: "bg-gray-100 text-gray-900"
-  };
-
-  return (
-    <button className={`px-6 py-3 rounded-lg font-medium transition-colors ${variants[variant]} ${className}`}>
-      {children}
-    </button>
-  );
-};
 
 // Reusable Stat Component
 const Stat = ({ percentage, description }) => (
