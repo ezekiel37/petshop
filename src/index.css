@@ -236,7 +236,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-text-primary: #f9fafb;
     --color-text-secondary: #d1d5db;
@@ -245,7 +245,7 @@ input:focus, textarea:focus, select:focus {
     --color-background-accent: #1e3a8a;
     --color-border: #374151;
   }
-}
+} */
 
 /* Print styles */
 @media print {
